@@ -5,9 +5,23 @@
 </head>
 <body>
 <a href="{{ url_for('index') }}">Home</a>
-    <div>
-        {{weather_info}}
-    </div>
+
+
+<div>
+<table>
+{% for key, value in weather_info.items() %}
+   <tr>
+        <th> {{ key }} </th>
+        <td> {{ value }} </td>
+   </tr>
+{% endfor %}
+</table>
+</div>
+
+<img src="{{  user_image  }}" alt="User Image" width="700" height="700">
+
+
+
 
 
 </body>
