@@ -1,25 +1,42 @@
 <html>
+<link rel="icon" href="data:,">
 <head>
     <title>Weather App</title>
-
 </head>
+
+<link href="../static/styles/style.css" type="text/css" rel="stylesheet">
+
 <body>
 <a href="{{ url_for('index') }}">Home</a>
-    <div>
-        Weather App
-    </div>
+
+<h1 class="title">PS Weather</h1>
+
+
 
 {% block content %}
-    <h1>City Search</h1>
+    <h2>Find out if you need scarves or shades</h2>
+    <h2>Search for the weather in your City now:</h2>
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
-        <p>
-            {{ form.city }}<br>
+        <p >
+            {{ form.city(size=50) }}<br>
 
         </p>
         <p>{{ form.submit() }}</p>
     </form>
 {% endblock %}
 
+<div class="myGallery">
+  <img src="https://picsum.photos/190/190?1" />
+  <img src="https://picsum.photos/190/190?2" />
+  <img src="https://picsum.photos/190/190?3" />
+  <img src="https://picsum.photos/190/190?4" />
+  <img src="https://picsum.photos/190/190?5" />
+  <img src="https://picsum.photos/190/190?6" />
+  <img src="https://picsum.photos/190/190?7" />
+  <img src="https://picsum.photos/190/190?8" />
+  <img src="https://picsum.photos/190/190?9" />
+  <img src="https://picsum.photos/190/190?10" />
+  </div>
 </body>
 </html>

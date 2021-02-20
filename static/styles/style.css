@@ -1,0 +1,30 @@
+body {
+    background: -webkit-linear-gradient(-45deg, #35577D, #141E30);
+}
+
+.title {
+    text-align: center;
+    color:lightgreen;
+    font-size: 75px;
+}
+
+h2 {
+    text-align: center;
+    color: skyblue;
+    font-size: 30px;
+}
+
+form {
+    text-align: center;
+
+}
+
+.myGallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.myGallery img {
+  width: 100%;
+}

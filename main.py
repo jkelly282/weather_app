@@ -1,27 +1,22 @@
-import base64
 import json
 import sys
-from flask_table import Table, Col
-
 import geopandas
+import geopandas as gpd
 import matplotlib
-from werkzeug.utils import redirect
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
+import matplotlib.pyplot as plt
 import requests
-from flask_wtf import FlaskForm
-from flask import Flask, render_template, url_for, make_response
 from dotenv import load_dotenv
+from flask import Flask, render_template, url_for, make_response
+from flask_wtf import FlaskForm
+from shapely.geometry import Point
+from werkzeug.utils import redirect
+from wtforms import StringField, SubmitField
 from config import Config
 from constants import BASE_URL, FORBIDDEN_CITY
-from shapely.geometry import Point
-import geopandas as gpd
-from geopandas import GeoDataFrame
-import matplotlib.pyplot as plt
 matplotlib.use('Agg')
-from pylab import rcParams
-import io
 import os
 import glob
+import logging
 
 load_dotenv()
 
