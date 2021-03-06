@@ -4,27 +4,70 @@
 
 </head>
 
-<link href="../static/styles/style.css" type="text/css" rel="stylesheet">
+<link href="/static/styles/style.css" type="text/css" rel="stylesheet">
 <body>
 <a href="{{ url_for('index') }}">Home</a>
+
+<h1 class="title">
+  Weather for: {{ weather_info.get('name')}} ...
+</h1>
+
+<h2>
+  at {{current_time }}
+</h2>
+
+<div>
+<table>
+
+  <tr>
+    <td>Temperature</td>
+    <td>{{ weather_info.get('main').get('temp') }}</td>
+
+  </tr>
+  <tr>
+    <td>Wind Speed</td>
+    <td>{{ weather_info.get('wind').get('speed')}}</td>
+  </tr>
+
+      </tr>
+  <tr>
+    <td>Weather</td>
+    <td>{{ weather_info.get('weather')[0].get('main')}}</td>
+  </tr>
+
+      <tr>
+    <td>Weather Description</td>
+    <td>{{ weather_info.get('weather')[0].get('description')}}</td>
+  </tr>
+
+          <tr>
+    <td>Pressure</td>
+    <td>{{ weather_info.get('main').get('pressure')}} Pa</td>
+  </tr>
+          <tr>
+    <td>Humidity</td>
+    <td>{{ weather_info.get('main').get('humidity')}} %</td>
+  </tr>
+
+</table>
+</div>
+
+
 
 
 <div>
 <table>
-{% for key, value in weather_info.items() %}
+{% for i in future_info.get('list') %}
    <tr>
-        <th> {{ key }} </th>
-        <td> {{ value }} </td>
+        <th> {{ i.get('dt_txt') }} </th>
+        <td> {{ i.get('main').get('temp') }} </td>
+        <td> <img src="http://openweathermap.org/img/wn/@2x.png" /> </td>
    </tr>
 {% endfor %}
 </table>
 </div>
 
-<img src="{{  user_image  }}" alt="User Image" width="700" height="700">
 
-
-
-
-
+<img src="{{  user_image  }}" alt="User Image" width="350" height="350">
 </body>
 </html>

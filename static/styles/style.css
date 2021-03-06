@@ -2,6 +2,16 @@ body {
     background: -webkit-linear-gradient(-45deg, #35577D, #141E30);
 }
 
+.forbiddenbackground{
+    background: black;
+}
+
+.title_fb{
+    color: red;
+    text-align: center;
+    font-size: 60px;
+}
+
 .title {
     text-align: center;
     color:lightgreen;
@@ -27,4 +37,30 @@ form {
 
 .myGallery img {
   width: 100%;
+}
+
+tr {
+    color: aliceblue;
+    font-size: 30px;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+    width: 30%;
+}
+
+.forbidden {
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+    width: 30%;
 }
